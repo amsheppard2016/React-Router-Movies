@@ -23,6 +23,7 @@ const Movie = props => {
     // Uncomment this only when you have moved on to the stretch goals
     const saveMovie = () => {
         const addToSavedList = props.addToSavedList;
+        console.log("addToSavedList", movie);
         addToSavedList(movie);
     };
 
@@ -49,7 +50,9 @@ const Movie = props => {
                     </div>
                 ))}
             </div>
-            <div className="save-button">Save</div>
+            <div className="save-button" onClick={saveMovie}>
+                Save
+            </div>
         </div>
     );
 };
